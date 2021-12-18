@@ -4,5 +4,8 @@
     "author_name": "David Li",
     "description": "A short description of the project.",
     "open_source_license": ["MIT", "BSD-3-Clause", "No license file"],
-    "python_interpreter": ["python3", "python"]
+    "python_interpreter": ["python3", "python"],
+    "_copy_without_render": [
+        ".github/workflows/sample_cron_job.yml"
+    ]
   }
