@@ -1,4 +1,4 @@
-name: {{cookiecutter.project_slug}} - Run Tests
+name: Run Tests
 on:
   push:
     branches:
