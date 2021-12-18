@@ -1,4 +1,4 @@
-name: Run Tests
+name: {{cookiecutter.project_slug}} - Run Tests
 on:
   push:
     branches:
@@ -10,22 +10,17 @@ on:
 # Add cron job to ensure external webpages + apis have no changed
 jobs:
   run_tests:
-    strategy:
-        fail-fast: false
-        matrix:
-          python-version: [3.8]
-          os: [ubuntu-20.04]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-20.04
     name: coverage
     env:
-      PYTHON: ${{ matrix.python-version }}
-      OS: ${{ matrix.os }}
+      PYTHON: 3.8
+      OS: ubuntu
 
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.8
 
       - name: Install Dependencies
         run: |
